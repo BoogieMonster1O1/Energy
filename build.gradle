@@ -39,14 +39,18 @@ version = getVersionName()
 logger.lifecycle("Building Energy: " + version)
 
 repositories {
+	maven {
+		name = 'Legacy Fabric Maven'
+		url = 'https://dl.bintray.com/legacy-fabric/Legacy-Fabric-Maven/'
+	}
 	mavenCentral()
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.16.4"
-	mappings "net.fabricmc:yarn:1.16.4+build.7:v2"
+	minecraft "com.mojang:minecraft:1.8.9"
+	mappings "net.fabricmc:yarn:1.8.9+build.202011050955:v2"
 
-	modImplementation  "net.fabricmc:fabric-loader:0.10.8"
+	modImplementation  "net.fabricmc:fabric-loader-1.8.9:0.9.3+build.202009100647"
 
 	testCompile 'junit:junit:4.12'
 }
